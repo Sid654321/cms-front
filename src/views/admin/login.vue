@@ -10,7 +10,7 @@
           <el-input placeholder="请录入密码" type="password" v-model="form.password"></el-input>
         </el-form-item>
         <el-form-item style="font-size: 12px;">
-          <el-button style="width: 100%;font-size: 16px;" type="primary" :loading="loading" @click="submit">立即登录</el-button>
+          <el-button style="width: 100%;font-size: 16px;" type="primary"  :loading="loading" @click="submit">立即登录</el-button>
           建议使用chrome、firefox浏览器,©copyright2020
         </el-form-item>
       </el-form>
@@ -28,7 +28,7 @@ export default {
     return{
       form:{
         userName:'admin',
-        password:'123456',
+        password:'12',
       },
       loading:false,
       rules:{
@@ -43,6 +43,7 @@ export default {
         if(valid){
           this.loading = true
           //执行登录操作
+
           this.$store.dispatch('login',this.form).then(()=>{
             //执行页面跳转
             this.$router.push('/index')
@@ -50,6 +51,8 @@ export default {
             this.loading = false
             this.$message.error(error)
           })
+
+          
         }
       })
     }
