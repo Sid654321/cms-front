@@ -41,11 +41,6 @@ const router = new VueRouter({
                     component:Channel
                 },
                 {
-                    path:'/user',
-                    name:'user',
-                    component:User
-                },
-                {
                     path:'/friend',
                     name:'friend',
                     component:FriendLink
