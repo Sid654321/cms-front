@@ -17,7 +17,7 @@
           <el-link class="user" :underline="false">
             <table>
               <tr>
-                <td valign="middle"><img src="../../assets/image/user.jpg"></td>
+                <td valign="middle"><img  :src="avatar"></td>
                 <td valign="top">{{userName}}</td>
                 <td valign="top">
                   <el-icon class="el-icon-caret-bottom"></el-icon>
@@ -28,7 +28,6 @@
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item command="index">网站首页</el-dropdown-item>
             <el-dropdown-item command="info">个人信息</el-dropdown-item>
-            <el-dropdown-item command="password">修改密码</el-dropdown-item>
             <el-dropdown-item command="logout">退出登录</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
@@ -43,11 +42,25 @@ export default {
   name: "Header",
   data(){
     return{
-      userName:token.getUser().userName
+      userName:token.getUser().userName,
+      avatar: token.getUser().avatar
     }
   },
   methods:{
-    handleCommand(){
+    handleCommand(command){
+      if (command == 'info'){
+        this.$router.push("/info")
+      }
+      if (command == 'index'){
+        this.$router.push("/")
+      }
+      if (command == 'logout'){
+        this.$store.commit('logout')
+        this.$router.push("/login")
+      }
+      if (command == 'password'){
+        this.$router.push("/password")
+      }
 
     }
   }

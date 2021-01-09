@@ -13,6 +13,9 @@ const store = new Vuex.Store({
         setToken(state,paramToken){
             state.token = paramToken
             token.set(paramToken)
+        },
+        logout(){
+           token.clear()
         }
     },
     logout(){

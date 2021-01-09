@@ -8,6 +8,7 @@ import Channel from "./views/admin/channel/index";
 import FriendLink from "./views/admin/friendlink/index";
 import Article from "./views/admin/article/index";
 import Comment from "./views/admin/comment/index";
+import UserInfo from "@/views/admin/user/info";
 
 Vue.use(VueRouter)
 
@@ -54,7 +55,13 @@ const router = new VueRouter({
                     path:'/comment',
                     name:'comment',
                     component:Comment
+                },
+                {
+                    path:'/info',
+                    name:'info',
+                    component:UserInfo
                 }
+
             ]
         }
     ]
