@@ -1,12 +1,19 @@
 <template>
-  <div>
-    frienslink,,,,,,
-  </div>
+  <v-md-editor v-model="text" height="400px"></v-md-editor>
 </template>
 
 <script>
+
+
 export default {
-  name: "index"
+
+  name: "index",
+  data() {
+    return {
+      text: '',
+    };
+  },
+
 }
 </script>
 

@@ -5,6 +5,8 @@ import index from "@/views/admin/index";
 import User from "@/views/admin/user/index";
 import Tag from "./views/admin/tag/index";
 import Channel from "./views/admin/channel/index";
+import ChannelAdd from "./views/admin/channel/add";
+import ChannelEdit from "./views/admin/channel/edit";
 import FriendLink from "./views/admin/friendlink/index";
 import Article from "./views/admin/article/index";
 import Comment from "./views/admin/comment/index";
@@ -40,6 +42,16 @@ const router = new VueRouter({
                     path:'/channel',
                     name:'channel',
                     component:Channel
+                },
+                {
+                    path:'/channel_add',
+                    name:'channel_add',
+                    component:ChannelAdd
+                },
+                {
+                    path:'/channel_edit',
+                    name:'channel_edit',
+                    component:ChannelEdit
                 },
                 {
                     path:'/friend',
