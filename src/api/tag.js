@@ -20,3 +20,7 @@ export function query(tag) {
 export function detail(id) {
     return axiosInstance.post('tag/detail', {id:id})
 }
+
+export function getAllTag(){
+    return axiosInstance.post('tag/getAll')
+}

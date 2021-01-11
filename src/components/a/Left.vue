@@ -1,9 +1,9 @@
 <template>
   <el-aside width="200px">
     <el-menu
-        :unique-opened="true"
+        :unique-opened="false"
         router
-        default-active="opens"
+        :default-openeds="opens"
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose">
@@ -33,7 +33,7 @@ export default {
   name: "Left",
   data(){
     return{
-      opens:['0','1','2'],
+      opens:["0"],
       menus:menus
     }
   },

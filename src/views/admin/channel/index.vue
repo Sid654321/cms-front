@@ -3,7 +3,7 @@
     <div>
       <el-form :inline="true" :model="queryForm" class="demo-form-inline">
         <el-form-item >
-          <el-input v-model="queryForm.name" placeholder="标签名称"></el-input>
+          <el-input v-model="queryForm.name" placeholder="栏目名称"></el-input>
         </el-form-item>
         <el-form-item >
           <el-input v-model="queryForm.summary" placeholder="概述"></el-input>

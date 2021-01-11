@@ -171,6 +171,18 @@ export default {
     getDetails(id){
       detail(id).then(data=>{
         this.form =data.data;
+        this.form = data.data
+        if(!data.data.content){
+          this.form.content=''
+        }
+        if(data.data.parentId==0){
+          this.form.parentId= null;
+        }
+        if(data.data.single=='Y'){
+          this.form.single= true;
+        }else{
+          this.form.single= false;
+        }
       })
     }
   }

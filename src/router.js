@@ -9,6 +9,8 @@ import ChannelAdd from "./views/admin/channel/add";
 import ChannelEdit from "./views/admin/channel/edit";
 import FriendLink from "./views/admin/friendlink/index";
 import Article from "./views/admin/article/index";
+import ArticleAdd from "./views/admin/article/add";
+import ArticleEdit from "./views/admin/article/edit";
 import Comment from "./views/admin/comment/index";
 import UserInfo from "@/views/admin/user/info";
 
@@ -62,6 +64,16 @@ const router = new VueRouter({
                     path:'/article',
                     name:'article',
                     component:Article
+                },
+                {
+                    path:'/article_add',
+                    name:'article_add',
+                    component:ArticleAdd
+                },
+                {
+                    path:'/article_edit',
+                    name:'article_edit',
+                    component:ArticleEdit
                 },
                 {
                     path:'/comment',
