@@ -8,6 +8,8 @@ import Channel from "./views/admin/channel/index";
 import ChannelAdd from "./views/admin/channel/add";
 import ChannelEdit from "./views/admin/channel/edit";
 import FriendLink from "./views/admin/friendlink/index";
+import FriendLinkAdd from "./views/admin/friendlink/add";
+import FriendLinkEdit from "./views/admin/friendlink/edit";
 import Article from "./views/admin/article/index";
 import ArticleAdd from "./views/admin/article/add";
 import ArticleEdit from "./views/admin/article/edit";
@@ -59,6 +61,16 @@ const router = new VueRouter({
                     path:'/friend',
                     name:'friend',
                     component:FriendLink
+                },
+                {
+                    path:'/friend_add',
+                    name:'friend_add',
+                    component:FriendLinkAdd
+                },
+                {
+                    path:'/friend_edit',
+                    name:'friend_edit',
+                    component:FriendLinkEdit
                 },
                 {
                     path:'/article',
