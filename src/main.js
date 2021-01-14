@@ -19,12 +19,24 @@ import vuepressTheme from '@kangc/v-md-editor/lib/theme/vuepress.js';
 VueMarkdownEditor.use(vuepressTheme);
 Vue.use(VueMarkdownEditor);
 
+import VMdPreview from '@kangc/v-md-editor/lib/preview';
+import '@kangc/v-md-editor/lib/style/preview.css';
+import githubTheme from '@kangc/v-md-editor/lib/theme/github.js';
+VMdPreview.use(githubTheme)
+Vue.use(VMdPreview);
 
-
+import 'swiper/swiper-bundle.css'
 Vue.use(Treeselect)
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 Vue.prototype.utils = utils
+
+Vue.directive('title',{
+  update(dom){
+    document.title = dom.dataset.title
+  }
+})
+
 new Vue({
   router,
   store,

@@ -33,6 +33,14 @@
           label="概述">
       </el-table-column>
       <el-table-column
+          prop="single"
+          label="是否单页">
+      </el-table-column>
+      <el-table-column
+          prop="pos"
+          label="位置">
+      </el-table-column>
+      <el-table-column
           align="center"
           width="150px"
           label="操作">

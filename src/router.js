@@ -16,12 +16,58 @@ import ArticleEdit from "./views/admin/article/edit";
 import Comment from "./views/admin/comment/index";
 import UserInfo from "@/views/admin/user/info";
 
+import FIndex from './views/front/Index'
+import List from './views/front/List'
+import Detail from './views/front/Detail'
+import ChannelDetail from './views/front/ChannelDetail'
+import TagList from './views/front/TagList'
+import token from "@/token";
+
 Vue.use(VueRouter)
 
 
 
 const router = new VueRouter({
     routes:[
+        {
+            path:'/',
+            name:'fIndex',
+            component:FIndex,
+            meta:{
+                requireLogin:false
+            }
+        },
+        {
+            path:'/list/:id',
+            name:'list',
+            component:List,
+            meta:{
+                requireLogin:false
+            }
+        },
+        {
+            path:'/detail/:id',
+            name:'detail',
+            component:Detail,
+            meta:{
+                requireLogin:false
+            }
+        }
+        ,{
+            path:'/channel_detail/:id',
+            name:'channel_detail',
+            component:ChannelDetail,
+            meta:{
+                requireLogin:false
+            }
+        },{
+            path:'/tag_list/:id',
+            name:'tag_list',
+            component:TagList,
+            meta:{
+                requireLogin:false
+            }
+        },
         {
             path:'/login',
             name:'login',
@@ -101,6 +147,22 @@ const router = new VueRouter({
             ]
         }
     ]
+})
+
+router.beforeEach((to, from, next) => {
+    if(!to.matched.some(r=>r.meta.requireLogin)){
+        next();
+    }else{
+        if(token.get()){
+            next()
+        }else{
+            if(to.path === '/login'){
+                next()
+            }else{
+                next('/login')
+            }
+        }
+    }
 })
 
 
