@@ -12,14 +12,14 @@
             <li>
               <template v-if="articles1 != null && articles1.length>=1">
                 <router-link :to='"/detail/"+articles1[0].id' target="_blank">
-                  <img src="@/assets/images/1.jpg"><span>{{articles1[0].title}}</span>
+                  <img :src="articles1[0].titleImg"><span>{{articles1[0].title}}</span>
                 </router-link>
               </template>
             </li>
             <li>
               <template v-if="articles1 != null && articles1.length>=2">
                 <router-link :to='"/detail/"+articles1[1].id' target="_blank">
-                  <img src="@/assets/images/2.jpg"><span>{{articles1[1].title}}</span>
+                  <img :src="articles1[1].titleImg"><span>{{articles1[1].title}}</span>
                 </router-link>
               </template>
             </li>
@@ -39,14 +39,14 @@
             <li>
               <template v-if="articles2 != null && articles2.length>=1">
                 <router-link :to='"/detail/"+articles2[0].id' target="_blank">
-                  <img src="@/assets/images/1.jpg"><span>{{articles2[0].title}}</span>
+                  <img :src="articles2[0].titleImg"><span>{{articles2[0].title}}</span>
                 </router-link>
               </template>
             </li>
             <li>
               <template v-if="articles2 != null &&articles2.length>=2">
                 <router-link :to='"/detail/"+articles2[1].id' target="_blank">
-                  <img src="@/assets/images/2.jpg"><span>{{articles2[1].title}}</span>
+                  <img :src="articles2[1].titleImg"><span>{{articles2[1].title}}</span>
                 </router-link>
               </template>
             </li>
@@ -66,14 +66,14 @@
             <li>
               <template v-if="articles3 != null && articles3.length>=1">
                 <router-link :to='"/detail/"+articles3[0].id' target="_blank">
-                  <img src="@/assets/images/1.jpg"><span>{{articles3[0].title}}</span>
+                  <img :src="articles3[0].titleImg"><span>{{articles3[0].title}}</span>
                 </router-link>
               </template>
             </li>
             <li>
               <template v-if="articles3 != null &&articles3.length>=2">
                 <router-link :to='"/detail/"+articles3[1].id' target="_blank">
-                  <img src="@/assets/images/2.jpg"><span>{{articles3[1].title}}</span>
+                  <img :src="articles3[1].titleImg"><span>{{articles3[1].title}}</span>
                 </router-link>
               </template>
             </li>

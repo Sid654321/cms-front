@@ -2,7 +2,7 @@ import axios from "axios";
 import store from "@/store";
 
 const axiosInstance = axios.create({
-    baseURL:'http://localhost:9999/cms/',
+    baseURL:'http://8.136.176.156:9999/cms/',
     timeout:10000
 })
 //请求拦截器配置
